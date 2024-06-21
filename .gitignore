@@ -1,0 +1,12 @@
+# Build 
+build
+bin
+
+# Results 
+results
+
+# Clangd 
+.cache
+
+compile_commands.json
+
