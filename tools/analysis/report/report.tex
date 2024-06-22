@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[bookmarks=true,breaklinks=true,letterpaper=true,colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+
+
+\title{Benchmark Analysis Report for RTL Simulation Tools}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item {\bf Memory access instructions in Figure 2} is shown in \autoref{fig:memratio}.
+  \end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.95\linewidth]{../../../out/fig.pdf}
+  \vspace*{-4mm}
+  \caption{The proportion of data memory access instructions to the total dynamic instructions of Verilator for different benchmarks.}
+  \label{fig:memratio}
+\end{figure}
+
+\end{document}
