@@ -1,7 +1,7 @@
 $(shell [ -d out ] || mkdir out)
 
 targets = memory-access.pdf \
-		  platform-info.tex platform-extra-info.tex benchmark-info.tex
+		  platform-info.tex platform-extra-info.tex benchmark-info.tex ipc.tex
 
 all: $(addprefix out/,$(targets))
 	make -C report
