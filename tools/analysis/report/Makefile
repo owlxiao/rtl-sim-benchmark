@@ -1,3 +1,3 @@
-report.pdf: report.tex
+report.pdf: $(wildcard ../out/*) report.tex
 	pdflatex -halt-on-error report.tex
 	pdflatex -halt-on-error report.tex

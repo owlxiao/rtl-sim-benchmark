@@ -1,6 +1,7 @@
 $(shell [ -d out ] || mkdir out)
 
-targets = memory-access.pdf
+targets = memory-access.pdf \
+		  platform-info.tex platform-extra-info.tex
 
 all: $(addprefix out/,$(targets))
 	make -C report

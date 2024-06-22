@@ -5,17 +5,22 @@
 \usepackage{enumitem}
 \usepackage[bookmarks=true,breaklinks=true,letterpaper=true,colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
 \usepackage{graphicx}
+\usepackage{geometry}
+
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
 
 \title{Benchmark Analysis Report for RTL Simulation Tools}
 \date{\today}
+\author{}
 
 \begin{document}
 
 \maketitle
 
 \begin{itemize}[noitemsep,topsep=0pt]
-    \item {\bf Memory access instructions in Figure 2} is shown in \autoref{fig:memratio}.
+    \item {\bf Memory access instructions } is shown in \autoref{fig:memratio}.
+    \item {\bf Environment setup} is shown in \autoref{tab:platform-1} and \autoref{tab:platform-2}.
   \end{itemize}
 
 \begin{figure}[h!]
@@ -25,5 +30,9 @@
   \caption{The proportion of data memory access instructions to the total dynamic instructions of Verilator for different benchmarks.}
   \label{fig:memratio}
 \end{figure}
+
+\input{../out/platform-info.tex}
+\centering
+\input{../out/platform-extra-info.tex}
 
 \end{document}
