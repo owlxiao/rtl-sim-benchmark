@@ -24,7 +24,7 @@ df = pd.DataFrame(rows)
 
 latex_format = {
     'label': 'tab:benchmarks',
-    'caption': 'Benchmarks used',
+    'caption': 'Benchmarks',
     'position': 'h',
     'hrules': True,
 }
