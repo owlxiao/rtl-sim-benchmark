@@ -10,7 +10,7 @@ from perflib import *
 
 root = Path('.')
 runs_dir = root.joinpath('runs')
-results_dir = root.joinpath('results')
+results_dir = root.joinpath('results').joinpath('runs')
 
 
 tasksets = {
