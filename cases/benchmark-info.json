@@ -1,0 +1,22 @@
+[
+    {
+        "category": "SoC",
+        "benchmarks": [
+            {
+                "name": "RocketChip",
+                "description": "SoC consisting of RocketCore and peripherals.",
+                "source": "https://github.com/chipsalliance/rocket-chip"
+            }
+        ]
+    },
+    {
+        "category": "Processor",
+        "benchmarks": [
+            {
+                "name": "RISCVMini",
+                "description": "Educational mini RISC-V core.",
+                "source": "https://github.com/ucb-bar/riscv-mini"
+            }
+        ]
+    }
+]

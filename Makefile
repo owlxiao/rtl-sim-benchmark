@@ -13,7 +13,10 @@ results/platform-info.csv:
 results/cpu-info.json:
 	lscpu -J > $@
 
-report: results/platform-info.csv results/cpu-info.json
+results/benchmark-info.json:
+	cp cases/benchmark-info.json $@
+
+report: results/platform-info.csv results/cpu-info.json results/benchmark-info.json
 	make -j -C tools/analysis
 
 	cp tools/analysis/report/report.pdf $(TEST_ROOT)/results/report.pdf
