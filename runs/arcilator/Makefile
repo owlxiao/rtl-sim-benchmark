@@ -37,11 +37,9 @@ $(BUILD_DIR)/%/%.ll $(BUILD_DIR)/%/%.h &: $(CASE_ROOT)/%.mlir
 # Testbench
 #===-------------------------------------------------------------------------===
 
-TESTBENCH_SRCS = $(shell find $(abspath ./) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
-
-bin/%.out: $(TESTBENCH_SRCS) $(BUILD_DIR)/%/%.ll  $(BUILD_DIR)/%/%.h
+bin/%.out: tb.cpp $(BUILD_DIR)/%/%.ll  $(BUILD_DIR)/%/%.h
 	opt -O3 --march=native -S $(BUILD_DIR)/$*/$*.ll | llc -O3 --filetype=obj -o $(BUILD_DIR)/$*/$*.o
 
 	bear -- clang++ -O3 -std=c++2a -march=native -no-pie -DDesign=$* \
-		-I$(BUILD_DIR)/$* $(TESTBENCH_SRCS) -I$(ARCILATOR_UTILS_ROOT) \
+		-I$(BUILD_DIR)/$* tb.cpp -I$(ARCILATOR_UTILS_ROOT) \
 		$(BUILD_DIR)/$*/$*.o -o $@

@@ -25,7 +25,7 @@ $(CASE_ROOT)%.sv: $(CASE_ROOT)/%.mlir
 	@echo === Generate SystemVerilog "->" $@
 	@firtool --lowering-options=disallowLocalVariables $< -o $@
 	
-TESTBENCH_SRCS = $(shell find $(abspath ./) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
+TESTBENCH_SRCS = $(abspath tb.cpp)
 
 bin/%.out: $(CASE_ROOT)/%.sv $(CASE_ROOT)/plusarg_reader.v $(CASE_ROOT)/plusarg_reader.v $(TESTBENCH_SRCS)
 	# Create build directory
