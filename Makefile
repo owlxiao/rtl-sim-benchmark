@@ -7,6 +7,9 @@ build:
 clean-build:
 	make -C runs clean
 
+clean-report:
+	make -C tools/analysis clean
+
 run:
 	python tools/benchmark.py
 
