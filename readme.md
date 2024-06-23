@@ -47,4 +47,4 @@ Run the following command to generate a performance report(report.pdf)
 make report
 ```
 
-The `results` folder contains an [example report](results/report.pdf) named `example-report.pdf`.
+The `results` folder contains an [example report](results/example-report.pdf) named `example-report.pdf`.
