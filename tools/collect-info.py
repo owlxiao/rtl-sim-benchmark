@@ -31,7 +31,7 @@ def verilator_version():
 def firtool_version():
     output = subprocess.run(['firtool', '--version'],
                             stdout=subprocess.PIPE, text=True).stdout
-    version = output.split()[1]
+    version = output.split('\n')[3]
     return f"Firtool {version}"
 
 
