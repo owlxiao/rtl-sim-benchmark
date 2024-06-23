@@ -18,10 +18,10 @@ int main(int argc, char **argv) {
 
   auto Clock = [&]() {
     Dut.view.clock = false;
-    dut_eval(&Dut.storage[0]);
+    Dut.eval();
 
     Dut.view.clock = true;
-    dut_eval(&Dut.storage[0]);
+    Dut.eval();
   };
 
   //===--------------------------------------------------------------------===//
