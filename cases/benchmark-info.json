@@ -6,6 +6,11 @@
                 "name": "RocketChip",
                 "description": "SoC consisting of RocketCore and peripherals.",
                 "source": "https://github.com/chipsalliance/rocket-chip"
+            },
+            {
+                "name": "NutShell",
+                "description": "RISC-V SoC designed by students in UCAS.",
+                "source": "https://github.com/OSCPU/NutShell"
             }
         ]
     },
