@@ -7,9 +7,12 @@ ALL_CASES := $(patsubst $(CASE_ROOT)/%.fir,%,$(wildcard $(CASE_ROOT)/*.fir))
 $(shell [ -d $(BUILD_DIR) ] || mkdir -p $(BUILD_DIR))
 $(shell [ -d $(BIN_DIR)   ] || mkdir -p $(BIN_DIR))
 
-.PHONY: build
+.PHONY: build clean
 
 build: $(patsubst %,bin/%.out,$(ALL_CASES))
+
+clean:
+	rm -rf build bin
 
 #===-------------------------------------------------------------------------===
 # FIRRTL to HW

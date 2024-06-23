@@ -4,6 +4,9 @@ export TEST_ROOT = $(shell pwd)
 build:
 	make -C runs build
 
+clean-build:
+	make -C runs clean
+
 run:
 	python tools/benchmark.py
 
