@@ -14,12 +14,14 @@ results_dir = root.joinpath('results').joinpath('runs')
 
 
 tasksets = {
+    'arcilator': 'taskset -c 0',
     'verilator-1': 'taskset -c 0',
-    'verilator-2': 'taskset -c 0,1'
+    'verilator-2': 'taskset -c 0,1',
 }
 
 benchmarks = [f.stem for f in root.joinpath('cases').glob('*.fir')]
-sims = ['verilator-1', 'verilator-2']
+sims = ['verilator-1', 'verilator-2', 'arcilator']
+
 
 def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, runs: int, cycles: int):
     if not exe.exists():
