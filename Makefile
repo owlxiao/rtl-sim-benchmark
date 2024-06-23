@@ -10,6 +10,9 @@ clean-build:
 clean-report:
 	make -C tools/analysis clean
 
+clean-results:
+	rm -rf results/*.json results/*.csv
+
 run:
 	python tools/benchmark.py
 
