@@ -1,15 +1,21 @@
-# Build 
+# Build directory
 build
 bin
 
 # Results 
-results
+results/*
 
 # Clangd 
 .cache
 
+# Compilation Database 
 compile_commands.json
 
+# Python cache
 __pycache__
 
+# latex cache
 out
+
+# example report
+!results/example-report.pdf
