@@ -16,7 +16,6 @@ def make_latex_table(tab: pd.DataFrame) -> Styler:
 
 
 def make_table(df: pd.DataFrame, field, highlight) -> Styler:
-    df = df.set_index('simulator')
     df['IPC'] = df['cpu_core/instructions/'] / df['cpu_core/cycles/']
 
     piv = df.pivot_table(field, index='benchmark', columns='simulator')

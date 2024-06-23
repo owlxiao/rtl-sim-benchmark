@@ -14,11 +14,12 @@ results_dir = root.joinpath('results').joinpath('runs')
 
 
 tasksets = {
-    'verilator-1': 'taskset -c 1'
+    'verilator-1': 'taskset -c 0',
+    'verilator-2': 'taskset -c 0,1'
 }
 
 benchmarks = [f.stem for f in root.joinpath('cases').glob('*.fir')]
-
+sims = ['verilator-1', 'verilator-2']
 
 def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, runs: int, cycles: int):
     if not exe.exists():
@@ -71,8 +72,8 @@ def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, 
 
 results_dir.mkdir(exist_ok=True, parents=True)
 
-for bench in benchmarks:
-    sim = 'verilator-1'
+runs = [(bench, sim) for bench in benchmarks for sim in sims]
+for bench, sim in runs:
     run_task(bench=bench, sim=sim, exe=runs_dir.joinpath(
         sim, 'bin', bench + '.out'),
         taskset=tasksets[sim],
