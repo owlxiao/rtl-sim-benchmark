@@ -8,7 +8,8 @@ results_dir = root.joinpath('results')
 to_latex_format = dict(
     label='tab:platform-2',
     caption='Platform Settings 2',
-    position='h',
+    position_float='centering',
+    position='h!',
     hrules=True
 )
 
