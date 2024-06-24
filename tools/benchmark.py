@@ -17,10 +17,11 @@ tasksets = {
     'arcilator': 'taskset -c 0',
     'verilator-1': 'taskset -c 0',
     'verilator-2': 'taskset -c 0,1',
+    'rtlflow-1': 'taskset -c 0,1',
 }
 
 benchmarks = [f.stem for f in root.joinpath('cases').glob('*.fir')]
-sims = ['verilator-1', 'verilator-2', 'arcilator']
+sims = ['verilator-1', 'verilator-2', 'arcilator', 'rtlflow-1']
 
 
 def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, runs: int, cycles: int):
@@ -81,7 +82,7 @@ for bench, sim in runs:
         taskset=tasksets[sim],
         results_dir=results_dir,
         runs=10,
-        cycles=500000
+        cycles=10000
     )
 
 df = []
