@@ -48,3 +48,7 @@ make report
 ```
 
 The `results` folder contains an [example report](results/example-report.pdf) named `example-report.pdf`.
+
+# Acknowledgments
+
+This project was inspired by [ksim-ae](https://github.com/pku-liang/ksim-ae). I've made significant modifications and simplifications to it. Many thanks to the original author of ksim-ae!
