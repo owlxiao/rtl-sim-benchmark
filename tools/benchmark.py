@@ -21,7 +21,7 @@ tasksets = {
 }
 
 benchmarks = [f.stem for f in root.joinpath('cases').glob('*.fir')]
-sims = ['verilator-1', 'verilator-2', 'arcilator', 'rtlflow-1']
+sims = ['verilator-1', 'verilator-2', 'arcilator']
 
 
 def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, runs: int, cycles: int):
