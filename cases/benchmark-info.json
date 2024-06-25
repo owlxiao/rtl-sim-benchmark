@@ -33,5 +33,15 @@
                 "source": "https://github.com/ucb-bar/gemmini"
             }
         ]
+    },
+    {
+        "category": "Floating point",
+        "benchmarks": [
+            {
+                "name": "FPU",
+                "description": "Floating point unit of RocketChip.",
+                "source": "https://github.com/chipsalliance/rocket-chip"
+            }
+        ]
     }
 ]
