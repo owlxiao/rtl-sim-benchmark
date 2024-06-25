@@ -23,5 +23,15 @@
                 "source": "https://github.com/ucb-bar/riscv-mini"
             }
         ]
+    },
+    {
+        "category": "Deep learning",
+        "benchmarks": [
+            {
+                "name": "Gemmini",
+                "description": "Gemmini matrix multiplication core.",
+                "source": "https://github.com/ucb-bar/gemmini"
+            }
+        ]
     }
 ]
