@@ -1,4 +1,4 @@
-export RUNS = verilator-1 verilator-2 arcilator
+export RUNS = verilator-1 verilator-2 arcilator essent
 export TEST_ROOT = $(shell pwd)
 
 build:

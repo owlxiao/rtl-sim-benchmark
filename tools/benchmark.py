@@ -18,10 +18,11 @@ tasksets = {
     'verilator-1': 'taskset -c 0',
     'verilator-2': 'taskset -c 0,1',
     'rtlflow-1': 'taskset -c 0,1',
+    'essent' : 'taskset -c 0'
 }
 
 benchmarks = [f.stem for f in root.joinpath('cases').glob('*.fir')]
-sims = ['verilator-1', 'verilator-2', 'arcilator']
+sims = ['verilator-1', 'verilator-2', 'arcilator', 'essent']
 
 
 def run_task(bench: str, sim: str, exe: Path, taskset: str,  results_dir: Path, runs: int, cycles: int):
